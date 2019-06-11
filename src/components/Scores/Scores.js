@@ -4,8 +4,10 @@ import "./Scores.css";
 class Scores extends Component{
     render(){
     return(
-    <h1>Score: {this.props.score} Games Won: {this.props.gamesWon}</h1>
-
+        <div className ="scoreCounter">
+    <h1>Score: {this.props.score}</h1>
+    <h2>Games Won: {this.props.gamesWon}</h2>
+</div>
     )}
 }
 export default Scores;
