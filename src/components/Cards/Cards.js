@@ -5,7 +5,7 @@ import "./Cards.css";
 const Cards = props => (
   <div className="card" onClick={props.imageClick}>
     <div className="img-container">
-      <img src={require("../../images/" + props.image)} />
+      <img alt={props.id}src={require("../../images/" + props.image)} />
     </div>
   </div>
 );
