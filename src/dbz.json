@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "image": "goku.png"
+    },
+    {
+      "id": 2,
+      "image": "bulma.png"    
+    },
+    {
+      "id": 3,
+      "image": "buu.png"
+    },
+    {
+      "id": 4,
+      "image": "cell.png" 
+    },
+    {
+      "id": 5,
+      "image": "freeza.png"
+    },
+    {
+      "id": 6,
+      "image": "gohan.png"
+    },
+    {
+      "id": 7,
+      "image": "kuririn.png"
+    },
+    {
+      "id": 8,
+      "image": "piccolo.png"
+    },
+    {
+      "id": 9,
+      "image": "shenron.png"
+    },
+    {
+      "id": 10,
+      "image": "tenshinhan.png"
+    },
+    {
+      "id": 11,
+      "image": "vegeta.png"
+    },
+    {
+      "id": 12,
+      "image": "yamcha.png"
+    }
+  ]
+  
