@@ -10,16 +10,13 @@ class App extends Component {
   state = {
     dbz,
     clicked: [],
-    score: 0
+    score: 0,
+    gamesWon: 0
   };
-
-  //when you click on a card ... the fish is taken out of the array
   imageClick = event => {
     const zfighter = event.target.alt;
     const alreadyClicked =
       this.state.clicked.indexOf(zfighter) > -1;
-
-    //if you click on a fish that has already been selected, the game is reset and cards reordered
     if (alreadyClicked) {
       this.setState({
         dbz: this.state.dbz.sort(function (a, b) {
@@ -29,8 +26,6 @@ class App extends Component {
         score: 0
       });
       alert("You already clicked that one, pal");
-
-      //if you click on an available fish, your score is increased and cards reordered
     } else {
       this.setState(
         {
@@ -42,7 +37,6 @@ class App extends Component {
           ),
           score: this.state.score + 1
         },
-        //if you get all 12 fish corrent you get a congrats message and the game resets        
         () => {
           if (this.state.score === 12) {
             alert("You did it");
@@ -50,6 +44,7 @@ class App extends Component {
               dbz: this.state.dbz.sort(function (a, b) {
                 return 0.5 - Math.random();
               }),
+              gamesWon: this.state.gamesWon +1,
               clicked: [],
               score: 0
             });
@@ -58,7 +53,7 @@ class App extends Component {
       );
     }
   };
-  
+
 
   render() {
     return (
@@ -66,6 +61,7 @@ class App extends Component {
         <Words />
         <div className="scores">
           <Scores score={this.state.score}
+                  gamesWon={this.state.gamesWon}
           />
         </div>
         <div className="container">

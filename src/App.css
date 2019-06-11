@@ -3,5 +3,6 @@
   flex-flow: row wrap;
 }
 .scores{
-  background-color:green;
+  background-color:black;
+  color:red;
 }
