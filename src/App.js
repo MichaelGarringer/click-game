@@ -25,7 +25,7 @@ class App extends Component {
         clicked: [],
         score: 0
       });
-      alert("You already clicked that one, pal");
+      alert("You already clicked that one - game will now reset!");
     } else {
       this.setState(
         {
@@ -39,12 +39,12 @@ class App extends Component {
         },
         () => {
           if (this.state.score === 12) {
-            alert("You did it");
+            alert("Congratulations, you won! Game will now reset!");
             this.setState({
               dbz: this.state.dbz.sort(function (a, b) {
                 return 0.5 - Math.random();
               }),
-              gamesWon: this.state.gamesWon +1,
+              gamesWon: this.state.gamesWon + 1,
               clicked: [],
               score: 0
             });
@@ -60,8 +60,9 @@ class App extends Component {
       <div>
         <Words />
         <div className="scores">
-          <Scores score={this.state.score}
-                  gamesWon={this.state.gamesWon}
+          <Scores
+            score={this.state.score}
+            gamesWon={this.state.gamesWon}
           />
         </div>
         <div className="container">
